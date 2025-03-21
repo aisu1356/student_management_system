@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body>
+<form action="/login_post/" method="post">
+    {% csrf_token %}
+    <div class="newdiv">
+        <h1 style="color:black">LOGIN FORM</h1><br><br>
+        <label for="username" style="color:black">USERNAME</label>
+        <input type="text" id="username" name="username"  placeholder="Enter username" required ><br><br>
+
+        <label for="password" style="color:black">PASSWORD</label>
+        <input type="password" id="password"  name="password" placeholder="Enter password" minlength="8" required ><br><br>
+        
+        <input type="submit" value="LOGIN" style="background-color:blue">
+        <a href="/register/" style="background-color:blue; color:white; font-size:large; text-decoration:none; padding:10px 20px; border-radius:5px; display:inline-block;"> User Signup</a>
+    </div>
+</form>
+{% comment %} <script src="/static/validateemail.js/"></script> {% endcomment %}
+</body>
+</html>
